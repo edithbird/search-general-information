@@ -1,0 +1,103 @@
+---
+title: "Your Document Title"
+author: "Document Author"
+date: "`r Sys.Date()`"
+output:
+  
+  prettydoc::html_pretty:
+    theme: cayman 
+    highlight: github
+---
+
+## A New Output Format
+
+`html_pretty` in the [**prettydoc**](https://github.com/yixuan/prettydoc/)
+package is a new output format for creating HTML documents from R Markdown files.
+`html_pretty` is more lightweight compared to `html_document`, and is more
+stylish than `html_vignette` when creating package vignettes.
+
+## New Styles
+
+`html_pretty` currently supports three page themes (`cayman`, `tactile` and
+`architect`), and two syntax highlight styles (`github` and `vignette`).
+The theme and highlight styles can be specified in the document metadata,
+for example:
+
+```yaml
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+```
+
+## Your Familiar Tools
+
+Feel free to use the `knitr` infrastructure with dozens of tunable options in
+your document.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+dates <- read.csv("/Users/christine.iyer/Box/Search/Search General Information/SearchPurchaseDates.csv", header = T, stringsAsFactors = F)
+dates <- dates %>% group_by(Date = as.Date(Created.Date, format = "%m/%d/%Y")
+#                            , Country = Primary.Country
+                            ) %>%
+  summarise(n = n()) %>% 
+  filter(
+    #Date > "2016-06-30", 
+         n>100
+         )
+range(dates$Date)
+dim(dates)
+dates
+write.csv(dates, "/Users/christine.iyer/Box/Search/Search General Information/Dates.csv", row.names = F)
+
+dates <- read.csv("/Users/christine.iyer/Box/Search/Search General Information/Dates.csv", header = T, stringsAsFactors = F)
+dates <- dates %>% rename(Leads = n)
+```
+
+
+```{r fig.width=6, fig.height=6, fig.align='center'}
+
+ggplot(dates, aes(x = Date)) + 
+geom_bar(fill = "blue", alpha = 0.5) + 
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+geom_boxplot(data = dates, aes(x = Date, y = Leads, fatten = 4)) + 
+labs(title = "Purchase Dates", subtitle = "Historical Leads") +
+labs(x="Date",y="Total Number of Leads in SF")
+```
+
+You can include code snippets of languages other than R, but note that
+the block header has no curly brackets around the language name.
+
+```cpp
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+    return x * 2;
+}
+```
+
+You can also write math expressions, e.g. $Y = X\beta + \epsilon$,
+footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{r, echo=FALSE, results='asis'}
+knitr::kable(dates)
+```
+
+## Stay Tuned
+
+Please visit the [development page](https://github.com/yixuan/prettydoc/) of the 
+`prettydoc` package for latest updates and news. Comments, bug reports and
+pull requests are always welcome.
+
+
+```{r}
+
+ggplot(iris, aes(x = Species)) + 
+geom_bar(fill = "blue", alpha = 0.5) + 
+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+geom_boxplot(data = iris, aes(x = Species, y = Sepal.Width, fatten = 4)) + 
+labs(title = "All Trips", subtitle = "Black line demarcates the number of trips to Russia") +
+labs(x="Government Official",y="Total Number of Trips")
+```
+
