@@ -1,6 +1,6 @@
 # search-general-information
 
-| Date       | Leads|     |
+| Date       | Leads|     
 |------------|-------|
 | 2014-09-07 | 4665  |
 | 2014-10-20 | 9738  |
