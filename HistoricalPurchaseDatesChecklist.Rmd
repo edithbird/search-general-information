@@ -1,0 +1,53 @@
+---
+title: "Search  Summaries"
+author: "Office of Marketing and Brand Management"
+date: "4/6/2020"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+```{r echo=FALSE}
+library(knitr)
+library(kableExtra)
+library(tinytex)
+```
+ 
+__Purchase Dates:__
+
++ 11/10/2015 
++ 3/2/2016 
++ 6/21/2016 
++ 6/28/2016 
++ 10/4/2016 
++ 12/12/2016 
++ 2/14/2017 
++ 6/6/2017 
++ 6/7/2017 
+
+\newcommand{\boxedcheckmark}
+  {{\ooalign{$\Box$\cr\hidewidth$\checkmark$\hidewidth}}}
+  
++ 10/12/2017 $\boxedcheckmark$
+
+  
++ 02/22 & 26/2018 $\boxedcheckmark$
+
++ 10/18/2018 $\boxedcheckmark$
+
++ 02/06/2019 $\boxedcheckmark$
+
++ 12/2 & 5/2019 $\boxedcheckmark$
+
+
+
+
