@@ -1,0 +1,98 @@
+---
+title: "FY21 NRCCUA Declared Students"
+subtitle: "Availability as of June 17, 2020"
+author: "Office of Marketing and Brand Management"
+address: "University of Southern Maine"     
+logo: C:/Users/christine.iyer/Downloads/blueLogo.png
+date: '`r format(Sys.Date(), "%B %d, %Y")`' 
+fontfamily: lmodern
+fontsize: 12pt
+graphics: null
+papersize: 
+geometry: margin=1.0in
+classoption:
+  - oneside
+  #- more options here, see rmarkdown documentation 
+UP_title: yes
+UP_subtitle: yes
+shaded_quote: yes
+output: 
+  yart::yart
+---
+
+
+
+```{r setup, include=FALSE, echo = FALSE, warning = FALSE, fig.align="center"}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+
+```{r}
+library(tidyverse)
+library(knitr)
+library(googlesheets4)
+```
+
+```{r}
+data_NR <- read.csv("C:/Users/christine.iyer/Box/Search/Search General Information/NRCCUA Stuff/NRCCUADeclared.csv", header = T)
+data_NR <- data_NR %>% select(Start,State, Number)
+```
+
+# Basic Description
+
+The datalab.encoura website offers an abundance of information pertinent to Higher Education Search. In addition to providing research findings on national trends in enrollment, student mindsets, and student sentiment, it should also be used as a tool for the University of Southern Maine (USM) to check availability and quantity of lead and inquiry names with filters for location, class, and rank. 
+
+Per our annual contract, USM has prepaid for 45,000 lead names. Orders can be placed for prospective student search (leads) on this website or through our representative. In addition, the availability of declared students can be researched there. A __Declared Student__, according to the description on the website, is one who has "expressed unaided and specific interest in attending [our] institution in particular." The cohort is much smaller; however, NRCCUA purports these students are, on average, 8 times more likely to enroll here when compared to other inquiries. As a result the cost for these inquiries is much higher at $12.00 each. 
+
+This document reflects the number of declared students available as of June 17, 2020 with ANY self-declared GPA. I have selected only states where we most actively recruit.
+
+
+
+---
+
+# Findings
+
+### Rising Seniors
+
+```{r echo=FALSE}
+data_NR_SR <- data_NR %>% filter(Start == "Fall 2021")  
+kable(data_NR_SR %>% arrange(desc(Number)))
+```
+
+### Rising Juniors
+
+```{r echo=FALSE}
+data_NR_JR <- data_NR %>% filter(Start == "Fall 2022")  
+
+
+kable(data_NR_JR%>% arrange(desc(Number)))
+```
+
+### Rising Sophomores
+
+```{r echo=FALSE}
+data_NR_PH <- data_NR %>% filter(Start == "Fall 2023")  
+
+kable(data_NR_PH%>% arrange(desc(Number)))
+```
+
+---
+
+# Conclusions 
+
+* The total cost for all 315 declared students would be $3,780.00.
+
+* Cost for all 178 declared rising Seniors would be $2,136.00
+
+* Cost for all 108 declared rising Seniors would be $1,296.00
+
+* Cost for all 29 declared rising Seniors would be $348.00
+
+* If we select only the 302 students with a GPA of C+ or higher, the total cost would drop by $156.00
+
+* I have asked our NRCCUA representative, Patricia Plourde, to clarify whether "Declared" students are intentionally excluded from routine lead name purchases. I will update this document with the answer when it becomes available.
+
