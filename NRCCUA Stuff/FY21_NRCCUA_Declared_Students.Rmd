@@ -94,5 +94,7 @@ kable(data_NR_PH%>% arrange(desc(Number)))
 
 * If we select only the 302 students with a GPA of C+ or higher, the total cost would drop by $156.00
 
-* I have asked our NRCCUA representative, Patricia Plourde, to clarify whether "Declared" students are intentionally excluded from routine lead name purchases. I will update this document with the answer when it becomes available.
+* It is important to understand that many of the Declared Students will already be in our database because we will have acquired them as leads (as long as we purchase from their county).
+If leads have not converted to inquiries through one of our referral channels, 
+we will not know they bacame inquiries unless we pay the declared student rate. The purchase of declared students will likely only be justified if they are pursued by the Office of Admissions.  
 
