@@ -88,13 +88,20 @@ kable(data_NR_PH%>% arrange(desc(Number)))
 
 * Cost for all 178 declared rising Seniors would be $2,136.00
 
-* Cost for all 108 declared rising Seniors would be $1,296.00
+* Cost for all 108 declared rising Juniors would be $1,296.00
 
-* Cost for all 29 declared rising Seniors would be $348.00
+* Cost for all 29 declared rising Sophomores would be $348.00
 
 * If we select only the 302 students with a GPA of C+ or higher, the total cost would drop by $156.00
 
 * It is important to understand that many of the Declared Students will already be in our database because we will have acquired them as leads (as long as we purchase from their county).
 If leads have not converted to inquiries through one of our referral channels, 
-we will not know they bacame inquiries unless we pay the declared student rate. The purchase of declared students will likely only be justified if they are pursued by the Office of Admissions.  
+we will not know they bacame inquiries unless we pay the declared student rate. The benefit to purchasing declared student names is that Admissions will know early on their high-level of interest.
+
+* _Addendum_ June 24, 2020
+Rachel, Tracy, and Chris met to discuss options in acquiring the NRCCUA Declared Students. Plan as follows:
+  - Chris will pull historical conversion rates of historical out-of-state declared name purchase (~2016), The difference between the past and present purchases is that in 2016 there was potentially not the same out-of-state awareness. 
+  - We plan to acquire the out-of-state names, which total 31, at a total cost of $372.00. The Office of Marketing and Branding will cover this cost. The purchase is tentatively scheduled for August. Chris will make Patricia Plourde aware of the decision and will ask how many names she expects by then. 
+  - Because there is a tentative plan to purchase College Board leads in July, Chris will reach out to Pete Sison, CCB rep, to find out whether the June SAT happened and if names will even be available by August 1 in spite of the Covid-19 quarentine. 
+  -
 
