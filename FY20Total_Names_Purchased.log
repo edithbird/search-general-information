@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.24)  7 JUL 2020 15:58
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.24)  8 JUL 2020 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,30 +933,47 @@ LaTeX Info: Redefining \selectfont on input line 72.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \langwohyphens=\language3
-File: FY20Total_Names_Purchased_files/figure-latex/fig-margin-1.pdf Graphic fil
-e (type pdf)
-<use FY20Total_Names_Purchased_files/figure-latex/fig-margin-1.pdf>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 136
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110
 .
 
 (c:/Users/christine.iyer/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/
 umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 136
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110
 .
 
 (c:/Users/christine.iyer/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/
 umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \vbox (2.53435pt too high) has occurred while \output is active []
+
+[1
 
 ]
-Missing character: There is no 有 in font [lmroman8-regular]:mapping=tex-text;!
-No file FY20Total_Names_Purchased.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+File: FY20Total_Names_Purchased_files/figure-latex/unnamed-chunk-8-1.pdf Graphi
+c file (type pdf)
+<use FY20Total_Names_Purchased_files/figure-latex/unnamed-chunk-8-1.pdf>
 
-Package fontspec Warning: \addfontfeature(s) ignored on line 196; it cannot be
+Overfull \hbox (12.01645pt too wide) in paragraph at lines 149--150
+[][]  
+ []
+
+
+Overfull \hbox (15.28009pt too wide) in alignment at lines 166--170
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (15.28009pt too wide) in alignment at lines 170--188
+ [] [] [] [] [] [] 
+ []
+
+No file FY20Total_Names_Purchased.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+
+Package fontspec Warning: \addfontfeature(s) ignored on line 198; it cannot be
 (fontspec)                used with a font that wasn't selected by a fontspec
 (fontspec)                command.
 (fontspec)                 
@@ -964,22 +981,22 @@ Package fontspec Warning: \addfontfeature(s) ignored on line 196; it cannot be
 (fontspec)                  The requested feature is "LetterSpace=10". 
 
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
 (./FY20Total_Names_Purchased.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
 Package rerunfilecheck Info: File `FY20Total_Names_Purchased.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 6DE2701841163793027B6249E3D98457;354.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+(rerunfilecheck)             Checksum: 2E785A323CCBBBBDA44FE911F77AACAC;541.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
  ) 
 Here is how much of TeX's memory you used:
- 15727 strings out of 481269
- 289049 string characters out of 5922507
- 611730 words of memory out of 5000000
- 32946 multiletter control sequences out of 15000+600000
- 538012 words of font info for 59 fonts, out of 8000000 for 9000
+ 15707 strings out of 481269
+ 288919 string characters out of 5922507
+ 610951 words of memory out of 5000000
+ 32933 multiletter control sequences out of 15000+600000
+ 534912 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,12n,55p,304b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,11n,55p,310b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on FY20Total_Names_Purchased.pdf (2 pages).
