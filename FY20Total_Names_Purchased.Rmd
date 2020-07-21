@@ -1,7 +1,6 @@
 ---
-title: "FY20 Search Names Purchased"
-subtitle: "Office of Marketing and Brand Management"
-date: "`r Sys.Date()`"
+title: "FY20 Search Names Purchased Office of Marketing and Brand Management"
+date: "July 10, 2020, (updated `r format(Sys.time(), '%B %d, %Y')`)"
 
 output:
   tufte::tufte_handout:
@@ -19,11 +18,11 @@ link-citations: yes
 library(tufte)
 library(knitr)
 library(formatR)
-library(blastula)
+
 library(gt)
-library(glue)
+
 library(formattable)
-library(hms)
+
 library(tidyverse)
 library(knitr)
 library(ggpubr)
@@ -43,7 +42,7 @@ options(tinytex.verbose = TRUE)
 ```
 
 ```{r, include=FALSE}
-#source("C:/Users/christine.iyer/Box/FY20_Advertising__FilterTableByVendor/DataTidyingForAds.R")
+options(tinytex.verbose = TRUE)
 ```
 
 # __Office of Marketing and Brand Management__
@@ -106,61 +105,6 @@ kable(CB)
 ```
 
 
-```{r eval=FALSE, include=FALSE}
-image <- "C:/Users/christine.iyer/Pictures/FY20_Search.PNG"
-
-
-imgur_image <-
-   add_imgur_image(
-     image = image,
-     client_id = "851117406f0b457"
-   )
-#Email
-
-# The plot to the side will be included in an email. 
-
-
-
-
-body_text <-
-  glue(
-    "
-
-
-Hi Tracy, \\
-Attached is a  \\
-because the census report is a couple months away. We \\
-discussed criteria for a new list which will hopefully \\ 
-include students who have deposited and are due to start \\
-in the upcoming months. This will give us a second year \\
-of applications so we can look at the patterns of ap-\\
-plication flow. He's sending the list by EOD tomorrow.
-
-
-
-{imgur_image}
-
-
-Thank you,
-
-Christine Iyer \\
-Marketing Data Analyst \\
-University of Southern Maine
-"
-  ) %>% md()
-
-compose_email(body = body_text) %>%
-  smtp_send(
-    #to = "wrike+into523544264@wrike.com",
-    to = "edithbird5@gmail.com",
-    #cc = "tracy.st@maine.edu",
-    from = "christine.iyer@maine.edu",
-    subject = "Project Update",
-    credentials = creds_key(id = "gmail")
-  )
-```
-
-
 __Breakdown of All FY20 Purchased Leads by Class__
 
 ```{r}
@@ -190,8 +134,6 @@ treemap(NothData,index = "label",vSize = "Leads_Purchased",title = "FY20 Lead Na
     fontsize.title=5,palette = colorsP)
 ```
 
-
-
 # Conclusions
 
  
@@ -204,28 +146,31 @@ treemap(NothData,index = "label",vSize = "Leads_Purchased",title = "FY20 Lead Na
 
 
 
-__For Reference: College Board Individual Purchases__
+__For Reference: Individual Lead Pyrchases Individual Purchases__
 
 
 
-| Class | Month|Leads|Cost|P.O. Number|Chart Fields|
-|-------|-------|--------|--------|-----------------|----------|
-|SR|NOV|3,354|$1576.38|PO #: 6100526728|Admissions|
-|JR|NOV|14,399|$6,767.53|PO #: 6100526729|Admissions|
-|SR|JAN_1|4,882|$2,294.54|PO #: 6100538943|Admissions|
-|JR|JAN_1|16,393|$7,704.71|PO #: 6100538936|Admissions|
-|JR|JAN_2|29,557|$13,891.79|PO #: 6100542417|Enrollment|
-|PH|JAN_2|17,252|$8,108.44|PO #: 6100542289|Enrollment|
-|JR|APR|5,909|$2,777.23|PO #: 6100546475|Admissions|
-|PH|APR|4,723|$2,219.81|PO #: 6100546474|Admissions|
-
+|Vendor| Class | Month|Leads|Cost|P.O. Number|Chart Fields|
+|-------|-------|--------|--------|-----------------|----------|----------|
+|CB|SR|NOV|3,354|$1576.38|PO #: 6100526728|Admissions|
+|CB|JR|NOV|14,399|$6,767.53|PO #: 6100526729|Admissions|
+|CB|SR|JAN_1|4,882|$2,294.54|PO #: 6100538943|Admissions|
+|CB|JR|JAN_1|16,393|$7,704.71|PO #: 6100538936|Admissions|
+|CB|JR|JAN_2|29,557|$13,891.79|PO #: 6100542417|Enrollment|
+|CB|PH|JAN_2|17,252|$8,108.44|PO #: 6100542289|Enrollment|
+|CB|JR|APR|5,909|$2,777.23|PO #: 6100546475|Admissions|
+|CB|PH|APR|4,723|$2,219.81|PO #: 6100546474|Admissions|
+|NRCCUA|SR|NOV|5,786|$2,719.42|PO #: ~| ~|
+|NRCCUA|JR|NOV|6,186|$2,907.42|PO #: ~| ~|
+|NRCCUA|SR|JAN_1|3,846|$1,807.62|PO #:  ~| ~|
+|NRCCUA|JR|JAN_1|18,528|$8,706.16|PO #:  ~| ~|
+|NRCCUA|JR|APR|3,621|$1,701.87|PO #:  ~| ~|
+|NRCCUA|PH|APR|7,033|$3,305.51|PO #:  ~| ~|
 
 
 \href{https://www.wrike.com/open.htm?id=532465819}{{\color{blue}{\underline{Wrike Project Details}}}}
 
 \href{https://github.com/edithbird/search-general-information}{{\color{blue}{\underline{Github Repository}}}}
-
-
 
 
 
